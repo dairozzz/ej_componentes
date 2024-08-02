@@ -1,4 +1,16 @@
-a{
+:root{
+  --backgroundcolorvioleta--:blueviolet;
+  --backgroundcolorslategray--:slategray;
+  --backgroundcolorred--:red;
+  --backgroundcolorgreen--:green;
+  --colorblanco--:#fff;
+  --colornegro--:black;
+  --colorgoldenrod--: goldenrod;
+  --centro--:center;
+}
+
+
+.boton{
     display: flex;
     width: 120px;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,24 +25,24 @@ a{
     height: 50px;
 }
 
-.boton1{
-    background-color: blueviolet;
-    color: #fff;
+.boton--color1{
+    background-color: var(--backgroundcolorvioleta--);
+    color: var(--colorblanco--);
 }
 
-.boton2{
-    background-color: slategray;
-    color: #fff;
+.boton--color2{
+    background-color: var(--backgroundcolorslategray--);
+    color: var(--colorblanco--);
 }
 
-.boton3{
-    background-color: crimson;
-    color: #fff;
+.boton--color3{
+    background-color: var(--backgroundcolorred--);
+    color: var(--colorblanco--);
 }
 
-.boton4{
-    background-color: forestgreen;
-    color: #fff;
+.boton--color4{
+    background-color:var(--backgroundcolorgreen--);
+    color: var(--colorblanco--);
 }
 
 .lista-container {
@@ -42,7 +54,7 @@ a{
     height: 400px;
 }
 
-.lista-item1 {
+.lista--item1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,21 +64,21 @@ a{
     cursor: pointer;
 }
 
-.lista-item2 {
+.lista--item2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
+    background-color: var(--backgroundcolorgreen--);
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.lista-item2:hover{
+.lista--item2:hover{
     background-color: #f2f2f2;
 }
 
-.lista-item3 {
+.lista--item3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,15 +88,15 @@ a{
     cursor: pointer;
 }
 
-.lista-item3:hover .lista-item-noti{
-    background-color: blueviolet;
+.lista--item3:hover .lista-item-noti{
+    background-color: var(--backgroundcolorvioleta--);
 }
 
-.lista-item4 {
+.lista--item4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: var(--backgroundcolorred--);
     padding: 10px;
     border-radius: 5px;
     cursor: not-allowed;
@@ -101,104 +113,55 @@ a{
 
 .lista-item-noti {
     background-color: #007bff;
-    color: white;
+    color: var(--colorblanco--);
     padding: 5px 10px;
     border-radius: 50%;
     font-weight: bold;
 }
 
-.card1{
+.card{
     flex-direction: column;
     display: inline-block;
     width: 340px;
-    box-shadow: 2px 10px 10px black;
+    box-shadow: 2px 10px 10px var(--colornegro--);
     border-radius: 10px;
     padding: 5px;
     text-align: center;
     margin: 20px;
-    border: 5px solid black;
+    border: 5px var(--colornegro--);
     background-position: center;
     background-size: 100px;
+    background-color: var(--colorgoldenrod--);
+}
+
+.card.card--link:hover{
+    background-color: var(--backgroundcolorgreen--);
+}
+
+.boton.botoncard--colorlink{
+    background-color: var(--backgroundcolorgreen--);
 }
 
 
-.card2{
-    flex-direction: column;
-    display: inline-block;
-    width: 340px;
-    box-shadow: 2px 10px 10px black;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    margin: 20px;
-    border: 5px solid black;
-    background-position: center;
-    background-size: 100px;
-    background-color: goldenrod;
-
-}
-
-.card2:hover{
-    background-color: green;
-}
-
-.botoncard2{
-    background-color: green;
-}
-
-
-.card3{
-    flex-direction: column;
-    display: inline-block;
-    width: 340px;
-    box-shadow: 2px 10px 10px black;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    margin: 20px;
-    border: 5px solid black;
-    background-position: center;
-    background-size: 100px;
-    background-color: goldenrod;
-    transition: transform 0.3s ease;
-}
-.contenedor3{
+.card.card--transition{
     padding: 20px;
 }
 
-.card3:hover{
+.card.card--transition:hover{
     transform: scale(1.1);
 }
 
-.card4{
-    flex-direction: column;
-    display: inline-block;
-    width: 340px;
-    box-shadow: 2px 10px 10px black;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    margin: 20px;
-    border: 5px solid black;
-    background-position: center;
-    background-size: 100px;
+.card.card--bloqueado:hover {
+    background-color: var(--backgroundcolorred--);
+}
+
+
+.boton.botoncard--bloqueado{
     cursor: not-allowed;
-    background-color: goldenrod;
-}
-
-.card4:hover {
-    background-color: red;
+    background-color: var(--backgroundcolorgreen--);
 }
 
 
-.botoncard4{
-    cursor: not-allowed;
-    background-color: darkgreen;
-}
-/**.botoncard4:hover{
-    background-color: rgb(80, 4, 4);
-} **/
-
-.card4:hover .botoncard4:hover{
-    background-color: red;
+.card.card--bloqueado:hover .botoncard--bloqueado:hover{
+    background-color: var(--backgroundcolorred--);
 }

@@ -1,133 +1,61 @@
-.grupo1 {
-    background-color: #f0f0f0;
+:root{
+  --backgrounddefault--:#f0f0f0;
+  --bordecolor--:#ccc;
+}
+
+
+.grupo {
+    background-color: var(--backgrounddefault--);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--bordecolor--);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .grupo1 h2 {
+  .grupo h2 {
     margin-top: 0;
   }
   
-  .grupo1 ul {
+  .grupo ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .grupo1 li {
+  .grupo li {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--bordecolor--);
   }
   
-  .grupo1 li:last-child {
-    border-bottom: none;
-  }
-
-
-  .grupo2 {
+  .grupo.grupo--grupo2{
     background-color: green;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  .grupo2:hover{
-    background-color: #f0f0f0 ;
+  .grupo.grupo--grupo2:hover{
+    background-color: var(--backgrounddefault--);
   }
 
-  .grupo2 h2 {
-    margin-top: 0;
-  }
-  
-  .grupo2 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .grupo2 li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .grupo2 li:last-child {
-    border-bottom: none;
-  }
-
-  .grupo3 {
+  .grupo.grupo--grupo3 {
     background-color: blueviolet;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
 
-  .grupo3:hover{
+  .grupo.grupo--grupo3:hover{
     transform: scale(1.1);
 }
 
-  .grupo3 h2 {
-    margin-top: 0;
-  }
-  
-  .grupo3 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .grupo3 li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .grupo3 li:last-child {
-    border-bottom: none;
-  }
-
-
-  .grupo4 {
+  .grupo.grupo--grupo4 {
     background-color: skyblue;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: not-allowed;
     transition: transform 0.3s ease;
   }
 
-  .grupo4:hover{
+  .grupo.grupo--grupo4:hover{
     transform: scale(0.8);
     background-color: red ;
 }
-
-  .grupo4 h2 {
-    margin-top: 0;
-  }
-  
-  .grupo4 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .grupo4 li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .grupo4 li:last-child {
-    border-bottom: none;
-  }
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
@@ -137,7 +65,6 @@
 	font-family: 'Open Sans';
 }
 body{
-	background-image: url(img/fondo.jpg);
 	background-size: cover;
 }
 nav{
