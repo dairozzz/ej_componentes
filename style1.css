@@ -1,6 +1,8 @@
 :root{
   --backgrounddefault--:#f0f0f0;
   --bordecolor--:#ccc;
+  --colorblanco--:white;
+  --colorrojo--:red;
 }
 
 
@@ -54,7 +56,7 @@
 
   .grupo.grupo--grupo4:hover{
     transform: scale(0.8);
-    background-color: red ;
+    background-color: var(--colorrojo--);
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -82,11 +84,11 @@ nav{
 .menu-horizontal > li > a{
 	display: block;
 	padding: 15px 20px;
-	color: white;
+	color: var(--colorblanco--);
 	text-decoration: none;
 }
 .menu-horizontal > li:hover{
-	background-color: red;
+	background-color: var(--colorrojo--);
 }
 .menu-vertical{
 	position: absolute;
@@ -104,17 +106,9 @@ nav{
 
 .menu-vertical li a{
 	display: block;
-	color: white;
+	color: var(--colorblanco--);
 	text-decoration: none;
 	padding: 15px 15px 15px 20px;
-
-}
-
-#html{
-	margin: auto;
-	padding: 20px;
-	max-width: 900px;
-	background: white;
 
 }
 
